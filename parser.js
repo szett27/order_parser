@@ -15,7 +15,7 @@
 //Continue searching document until you see 'AFCENT', turn all text into an AFCENT array that ends on a double carriage return
 
 //return two arrays which are arguments for the next csv parser -> save arrays as csv files.
-let sampleText = 'This is a sample.\n\n'+'1.1 All Components\n' + '1.1. Must do X\n\n' + '1.2 AFCENT';
+// let sampleText = 'This is a sample.\n\n'+'1.1 All Components\n' + '1.1. Must do X\n\n' + '1.2 AFCENT';
 
 let TransformText = (text) => {
     let All_Components = [];
@@ -58,4 +58,4 @@ let TransformText = (text) => {
     return([All_Components, AFCENT])
 }
 
-TransformText(sampleText)
+// TransformText(sampleText)

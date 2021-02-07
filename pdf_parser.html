@@ -17,7 +17,8 @@
     <h2>Result</h2>
     <br>
     <p id = 'input'></p>
-
+    <script src="parser.js"></script>
+    <script src="csvparser.js"></script>
     <script>
         const file = document.querySelector('pdf');
         const inputElement = document.getElementById('pdf');
@@ -26,9 +27,8 @@
         fileReader.onload = function(event) {
          document.getElementById('input').innerHTML = event.target.result;
         
-        //function to pass text and do the parsing
-        //one function for each part of the parse
-        //tdd?
+       
+        csv_parser(TransformText(event.target.result));
 
         };
     
