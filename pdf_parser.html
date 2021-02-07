@@ -1,0 +1,43 @@
+<html>
+
+<body>
+
+
+    <h1>PDF Parser</h1>
+    <br>
+    <br>
+    <br>
+    <h2>First Choose Your File</h2>
+    <form>
+        <input type = "file" id = "pdf">
+    </form>
+    <br>
+    <br>
+    <br>
+    <h2>Result</h2>
+    <br>
+    <p id = 'input'></p>
+
+    <script>
+        const file = document.querySelector('pdf');
+        const inputElement = document.getElementById('pdf');
+       
+        let fileReader = new FileReader();
+        fileReader.onload = function(event) {
+         document.getElementById('input').innerHTML = event.target.result;
+        
+        //function to pass text and do the parsing
+        //one function for each part of the parse
+        //tdd?
+
+        };
+    
+    inputElement.onchange = function(event) {
+    fileReader.readAsText(event.target.files[0]);
+    }; 
+
+    </script>
+
+
+</body>
+</html>
